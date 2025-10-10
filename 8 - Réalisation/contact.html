@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S02 — Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">S02</div>
+        <div class="brand-text">
+          <h1>Contact</h1>
+          <p class="tag">Restons en contact</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="cv.html" class="nav-link">CV</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <button id="toggleMode" class="btn ghost">🌙</button>
+      </nav>
+    </header>
+
+    <main class="main contact-main">
+      <h2>Envoyez-moi un message</h2>
+      <form class="contact-form">
+        <label>Nom :</label>
+        <input type="text" placeholder="Votre nom" required>
+
+        <label>Email :</label>
+        <input type="email" placeholder="Votre email" required>
+
+        <label>Message :</label>
+        <textarea rows="5" placeholder="Votre message..." required></textarea>
+
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 — Contact — Yassine</p>
+    </footer>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>

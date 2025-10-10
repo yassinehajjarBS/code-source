@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S02 — CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">S02</div>
+        <div class="brand-text">
+          <h1>Mon CV</h1>
+          <p class="tag">Compétences & Expériences</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="cv.html" class="nav-link active">CV</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button id="toggleMode" class="btn ghost">🌙</button>
+      </nav>
+    </header>
+
+    <main class="cv-main">
+      <aside class="cv-side">
+        <div class="profile">
+          <div class="avatar">Y</div>
+          <h3>Yassine</h3>
+          <p class="muted">Développeur Front-end</p>
+        </div>
+
+        <div class="info-block">
+          <h4>Contact</h4>
+          <p class="muted">yassinehajjar@example.com<br>+212 6 35 94 21 10</p>
+        </div>
+
+        <div class="info-block">
+          <h4>Langues</h4>
+          <p class="muted">Arabe, Français, Anglais</p>
+        </div>
+      </aside>
+
+      <section class="cv-content">
+        <h2>Expériences</h2>
+        <div class="experience">
+          <h3>Stagiaire — Front-end</h3>
+          <p class="muted">2024 — Entreprise X</p>
+          <p>Création de composants UI et optimisation responsive.</p>
+        </div>
+
+        <h2>Compétences</h2>
+        <div class="skills-grid">
+          <div class="skill">HTML & CSS</div>
+          <div class="skill">Flexbox & Grid</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Git</div>
+        </div>
+
+        <h2>Formation</h2>
+        <p class="muted">2023 — Formation Dév Web — Institut Y</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 — CV — Yassine</p>
+    </footer>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
